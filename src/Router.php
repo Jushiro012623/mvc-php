@@ -3,6 +3,11 @@ namespace App;
 class Router
 {
     protected $routes = [];
+    
+    /** 
+     *  @param {string} $route
+     * @param array $controller
+     **/
     private function addRoute($route, $controller, $action, $method)
     {
         $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];
