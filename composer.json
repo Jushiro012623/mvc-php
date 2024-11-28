@@ -3,7 +3,8 @@
     "description": "mvc_php",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Config\\": "Config/"
         }
     },
     "authors": [
@@ -12,5 +13,8 @@
             "email": "ivan_dev@my.pisopay.com.ph"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "migrate": "php Config/RunMigrations.php"
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 use App\Controllers\Welcome;
-use App\Router;
+use Config\Router;
 
 $router = new Router();
 

@@ -1,10 +1,11 @@
 <?php
-namespace App;
+namespace Config;
+// require '../src/Views'
 class Controller
 {
     protected function render($view, $data = [])
     {
         extract($data, EXTR_OVERWRITE);
-        include "Views/views/$view.php";
+        include "../src/Views/views/$view.php";
     }
 }

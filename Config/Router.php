@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace Config;
 class Router
 {
     protected $routes = [];

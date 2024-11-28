@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Controller;
+use Config\Controller;
 use App\Models\User;
 
 class Welcome extends Controller
@@ -15,6 +15,6 @@ class Welcome extends Controller
         //     new User('Martin', '2021')
         // ];
         // $this->render('index', ['names' => $names]);
-        $this->render('index', ['user' => 'User']);
+        $this->render('index', ['user' => 'IVAN']);
     }
 }
