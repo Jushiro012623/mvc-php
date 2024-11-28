@@ -5,13 +5,14 @@ namespace App\Database\Migrations;
 
 use Config\Migration;
 
-class CreateUser extends Migration {
+class CreateTodoList extends Migration {
     public function up() {
         $this->__invoke([
-            'todo' => [
+            'user' => [
                 'id' => 'int(11) NOT NULL AUTO_INCREMENT',
-                'title' => 'varchar(255) NOT NULL',
-                'description' => 'varchar(255) NOT NULL',
+                'name' => 'varchar(255) NOT NULL',
+                'email' => 'varchar(255) NOT NULL',
+                'password' => 'varchar(255) NOT NULL',
             ]
         ]);
     }

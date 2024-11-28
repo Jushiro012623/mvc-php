@@ -1,6 +1,5 @@
 <?php
 namespace Config;
-// require '../src/Views'
 class Controller
 {
     protected function render($view, $data = [])

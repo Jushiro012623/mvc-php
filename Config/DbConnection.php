@@ -15,7 +15,7 @@ class DbConnection {
             die('Error'. mysqli_connect_error());
         }
         date_default_timezone_set('Asia/Manila');
-        echo 'Connection Success';
+        // echo 'Connection Success';
         return $conn;
     }
 

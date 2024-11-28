@@ -9,6 +9,7 @@ foreach (glob(__DIR__ . '../../src/Database/Migrations/*.php') as $migrationFile
 
 $migrations = [
     'App\Database\Migrations\CreateUser',
+    'App\Database\Migrations\CreateTodoList',
 ];
 
 foreach ($migrations as $migrationClass) {

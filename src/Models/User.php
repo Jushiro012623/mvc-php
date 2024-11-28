@@ -1,15 +1,8 @@
 <?php
 
 namespace App\Models;
+use Config\Model;
 
-class User
+class User extends Model
 {
-    public $name;
-    public $dateOfBirth;
-
-    public function __construct($name, $dateOfBirth)
-    {
-        $this->name = $name;
-        $this->dateOfBirth = $dateOfBirth;
-    }
 }
