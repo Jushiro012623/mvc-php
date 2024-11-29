@@ -32,4 +32,13 @@ class Migration {
             }
         }
     }
+    
+    public function dropTable($table) {
+        $query = "DROP TABLE IF EXISTS `$table`;";
+        if (mysqli_query($this->conn, $query)) {
+            echo "Table `$table` dropped successfully.\n";
+        } else {
+            echo "Error dropping table `$table`: " . mysqli_error($this->conn). "\n";
+        }
+    }
 }

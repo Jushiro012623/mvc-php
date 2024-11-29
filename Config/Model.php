@@ -29,22 +29,18 @@ class Model {
 
     public static function find($id) {
         self::init();
-        $table = self::getTableName();
-        $sql = "SELECT * FROM $table WHERE id = ?";
-        $stmt = mysqli_prepare(self::$conn, $sql);
-        // var_dump($stmt);
-        // die();
-        if ($stmt === false) {
-            die('Error preparing statement: ' . mysqli_error(self::$conn));
-        }
-        mysqli_stmt_bind_param($stmt, 'i', $id);
-    
-        
-        mysqli_stmt_execute($stmt);
-    
-        $result = mysqli_stmt_get_result($stmt);
-    
-        return mysqli_fetch_assoc($result);
+            $table = self::getTableName();
+            $sql = "SELECT * FROM $table WHERE id = ?";
+            $stmt = mysqli_prepare(self::$conn, $sql);
+            // var_dump($stmt);
+            // die();
+            if ($stmt === false) {
+                die('Error preparing statement: ' . mysqli_error(self::$conn));
+            }
+            mysqli_stmt_bind_param($stmt, 'i', $id);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            return mysqli_fetch_assoc($result);
     }
     
 

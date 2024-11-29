@@ -15,18 +15,17 @@ use Config\Migration;
 class CreateUser extends Migration {
     public function up() {
         $this->__invoke([
-            'todo' => [
+            'users' => [
                 'id' => 'int(11) NOT NULL AUTO_INCREMENT',
-                'title' => 'varchar(255) NOT NULL',
-                'description' => 'varchar(255) NOT NULL',
+                'name' => 'varchar(255) NOT NULL',
+                'email' => 'varchar(255) NOT NULL',
+                'password' => 'varchar(255) NOT NULL',
             ]
         ]);
     }
 
     public function down() {
-        $this->down([
-            'user' => [] 
-        ]);
+        $this->dropTable('users');
     }
 }
 

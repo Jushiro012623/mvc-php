@@ -3,6 +3,6 @@
 namespace App\Models;
 use Config\Model;
 
-class User extends Model
+class Users extends Model
 {
 }
