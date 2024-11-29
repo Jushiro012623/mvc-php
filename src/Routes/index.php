@@ -2,7 +2,7 @@
 
 use App\Controllers\UserController;
 use App\Controllers\Welcome;
-use Config\Router;
+use Core\Router;
 $router = new Router();
 
 /*

@@ -1,5 +1,5 @@
 <?php
-namespace Config;
+namespace Core;
 class Controller
 {
     protected function render($view, $data = [])

@@ -4,7 +4,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "Config\\": "setup/"
+            "Core\\": "core/",
+            "Database\\": "database/"
         }
     },
     "authors": [
@@ -16,8 +17,8 @@
     "require": {},
     "scripts": {
         "start:dev": "php -S localhost:8000",
-        "migrate": "php Config/RunMigrations.php",
-        "rollback": "php Config/RunRollbackMigrations.php",
+        "migrate": "php Database/RunMigrations.php",
+        "rollback": "php Database/RunRollbackMigrations.php",
         "migrate:fresh": "composer rollback && composer migrate"
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
-namespace Config;
-
+namespace Core;
+use Core\Controller;
 class Router
 {
     protected $routes = [];

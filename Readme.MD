@@ -19,12 +19,16 @@ Before running this project, make sure you have the following installed:
 3. Update Composer dependencies by running the following command:
     ```bash
     composer update
+4. Regenerate the Composer autoloader to ensure that the application can properly locate all namespaces:
+
+    ```bash
+    composer dump-autoload --optimize
 ## Usage
 1. Once the dependencies are installed, you can run the application locally using a PHP built-in server or configure it with your web server.
     ```bash
     cd <project_directory>/public
 
-    composer start:dev
+    php -S localhost:8000
     ```
 
 2. Open your web browser and navigate to the following URL to access the application:

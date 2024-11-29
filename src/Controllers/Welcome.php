@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Config\Controller;
+use Core\Controller;
 
 /*
  * 

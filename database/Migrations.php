@@ -1,8 +1,7 @@
 <?php
 
-namespace Config;
-
-use Config\DbConnection;
+namespace Database;
+use Database\DbConnection;
 
 class Migration {
     private $conn;

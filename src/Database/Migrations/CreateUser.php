@@ -3,7 +3,7 @@
 // /Migrations/Migration1.php
 namespace App\Database\Migrations;
 
-use Config\Migration;
+use Database\Migration;
 /*
 |---------------------------------------------
 | Sample User Migration

@@ -15,6 +15,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 | Run The Application
 |---------------------------------------
 */
-require '../src/Bootstrap/bootstrap.php';
+require __DIR__ . '/../src/Bootstrap/bootstrap.php';
 
 
