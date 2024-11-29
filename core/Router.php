@@ -19,6 +19,14 @@ class Router
         $this->get('/' . $route . '/{id}/edit', $controller, 'edit');
         $this->post('/' . $route . '/{id}/delete', $controller, 'destroy');
     }
+    public function apiResource($route, $controller,)
+    {
+        $this->get('/' . $route, $controller, 'index');
+        $this->post('/' . $route, $controller, 'store');
+        $this->get('/' . $route . '/{id}', $controller, 'show');
+        $this->post('/' . $route . '/{id}', $controller, 'update');
+        $this->post('/' . $route . '/{id}/delete', $controller, 'destroy');
+    }
     public function get($route, $controller, $action = '__invoke')
     {
         $this->addRoute($route, $controller, $action, "GET");

@@ -14,7 +14,6 @@ class DbConnection {
     private $root;
     private $password;
     private $db;
-
     public function __construct(){
         $this->host = 'localhost';
         $this->root = 'root';
