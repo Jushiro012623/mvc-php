@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\User;
 use Config\Controller;
+use App\Requests\UserRequests;
 
 class UserController extends Controller{
     public function index(){
@@ -36,23 +37,39 @@ class UserController extends Controller{
             'password' => password_hash($password, PASSWORD_DEFAULT)
         ];
         User::insert($user);
-        $this->render('index');
+        // $this->render('users/index');
     }
-    public function show(){
-        $uri = $_SERVER['REQUEST_URI'];
-        $pattern = '/^\/user\/([a-zA-Z0-9-]+)$/'; // Regular expression to match /user/{view}
-        if (preg_match($pattern, $uri, $matches)) {
-            $view = $matches[1];  // The {view} parameter
-            var_dump($view);  // Display the captured view
-        }
-        var_dump($view); // This will show the 'view' parameter from the URL
-        die();
-        
-        $uri = $_SERVER['REQUEST_URI'];
-        var_dump( $uri );
-        die();
+    public function show($id){
         $user = User::find($id);
-        $this->render('show',['user' => $user]);
+        $this->render('users/show', ['user' => $user]);
+    }
+    public function edit($id){
+        $user = User::find($id);
+        $this->render('users/edit', ['user' => $user]);
+    }
+    public function update($id){
+        $name = $email = '';
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user'])) {
+            $name = isset($_POST['name']) ? $_POST['name'] : null;
+            $email = isset($_POST['email']) ? $_POST['email'] : null;
+        }
+        if(empty($name)){
+            return "Username must not be empty";
+        }
+        if(empty($email)){
+            return "Email must not be empty";
+        }
+        $data = [
+            'name' => $name,
+            'email' => $email,
+        ];
+        $user = User::update($id, $data);
+        var_dump($user);
+        die();
+        // $this->render('welcome');
+    }
+    public function destroy($id){
+        User::delete($id);
     }
     
 }

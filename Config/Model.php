@@ -5,10 +5,6 @@ class Model {
     private static $conn;
     protected $table;
     protected $fillable;
-
-    // public function __construct() {
-    //     $this->init();
-    // }
     public static function init() {
         if (self::$conn === null) {
             $dbConnection = new DbConnection();

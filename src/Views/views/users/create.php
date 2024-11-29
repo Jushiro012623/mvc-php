@@ -6,7 +6,7 @@
     <title>Users</title>
 </head>
 <body>
-    <form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
+    <form action="/users" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <input type="text" id="password" name="password" required>
