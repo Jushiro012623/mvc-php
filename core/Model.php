@@ -1,6 +1,6 @@
 <?php
 namespace Core;
-
+use Database\DbConnection;
 /*
 |------------------------------------------------------
 | Models
@@ -19,7 +19,6 @@ class Model {
             self::$conn = $dbConnection(); 
         }
     }
-
     protected static function getTableName() {
         $className = get_called_class();
         $className = basename(str_replace('\\', '/', $className));

@@ -3,8 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Users;
-use Config\Controller;
-use App\Requests\UserRequests;
+use Core\Controller;
 /*
 |-----------------------------------------------------
 | Sample Controller Resource
@@ -45,7 +44,7 @@ class UserController extends Controller{
             ];
             return Users::insert($user);
         } catch (\Throwable $th) {
-            (new Controller())->abort(404);
+            echo $th;
         }
         // $this->render('users/index');
     }

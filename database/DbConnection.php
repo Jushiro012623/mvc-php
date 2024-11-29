@@ -10,19 +10,30 @@ namespace Database;
 |
 */
 class DbConnection {
+    private $host;
+    private $root;
+    private $password;
+    private $db;
+
+    public function __construct(){
+        $this->host = 'localhost';
+        $this->root = 'root';
+        $this->password = '';
+        $this->db = 'test';
+    }
+
     public function __invoke(){
         $conn = mysqli_connect(
-            'localhost',
-            'root',
-            '',
-            'test'
+            $this->host,
+            $this->root,
+            $this->password,
+            $this->db
         );
         if(!$conn){
             echo "Error.\n";
             die('Error'. mysqli_connect_error());
         }
         date_default_timezone_set('Asia/Manila');
-        // echo 'Connection Success';
         return $conn;
     }
 
