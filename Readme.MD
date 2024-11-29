@@ -23,8 +23,14 @@ Before running this project, make sure you have the following installed:
 1. Once the dependencies are installed, you can run the application locally using a PHP built-in server or configure it with your web server.
     ```bash
     cd <project_directory>/public
-    
-    php -S localhost:<port> 
+
+    composer start:dev
+    ```
+
+2. Open your web browser and navigate to the following URL to access the application:
+    ```bash
+    http://localhost:8000 
+    ```
 ## Key Points:
 - The step to run `composer update` **immediately after cloning** the repository is emphasized.
 - This ensures that users know they need to update the Composer dependencies before proceeding.

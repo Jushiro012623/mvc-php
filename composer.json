@@ -15,6 +15,7 @@
     ],
     "require": {},
     "scripts": {
+        "start:dev": "php -S localhost:8000",
         "migrate": "php Config/RunMigrations.php",
         "rollback": "php Config/RunRollbackMigrations.php",
         "migrate:fresh": "php Config/RunRollbackMigrations.php && php Config/RunMigrations.php"
