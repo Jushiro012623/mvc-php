@@ -13,12 +13,12 @@ Before running this project, make sure you have the following installed:
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/Jushiro012623/mvc-php.git
-2. Update Composer dependencies by running the following command:
-    ```bash
-    composer update
-3. Navigate to the project directory:
+2. Navigate to the project directory:
     ```bash
     cd <project_directory>
+3. Update Composer dependencies by running the following command:
+    ```bash
+    composer update
 4. Regenerate the Composer autoloader to ensure that the application can properly locate all namespaces:
 
     ```bash
