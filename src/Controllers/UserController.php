@@ -9,7 +9,6 @@ use App\Requests\UserRequests;
 class UserController extends Controller{
     public function index(){
         $users = User::findAll();
-
         $this->render('users/index', ['users' => $users ]);
     }
     public function create(){
