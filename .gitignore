@@ -1,5 +1,4 @@
 /node_modules
-# composer.json
 .env
 vendor/
 composer.lock
