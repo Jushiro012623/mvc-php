@@ -35,7 +35,7 @@ class UserController extends Controller{
             'email' => $email,
             'password' => password_hash($password, PASSWORD_DEFAULT)
         ];
-        User::insert($user);
+        return User::insert($user);
         // $this->render('users/index');
     }
     public function show($id){
@@ -62,13 +62,13 @@ class UserController extends Controller{
             'name' => $name,
             'email' => $email,
         ];
-        $user = User::update($id, $data);
-        var_dump($user);
-        die();
+        return User::update($id, $data);
+        // var_dump($user);
+        // die();
         // $this->render('welcome');
     }
     public function destroy($id){
-        User::delete($id);
+        return User::delete($id);
     }
     
 }

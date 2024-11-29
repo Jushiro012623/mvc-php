@@ -9,6 +9,7 @@
 </head>
 <body class="relative h-screen">
     <form class="shadow-lg p-10 absolute top-1/2 left-1/2 -translate-x-1/2 w-[500px]  -translate-y-1/2 " action="/users/<?= $user['id']?>" method="POST"  >
+        <input type="hidden" name="_method" value="PUT">
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">

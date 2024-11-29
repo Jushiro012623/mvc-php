@@ -12,6 +12,15 @@ class Router
     {
         $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];
     }
+    public function resource($route, $controller,){
+        $this->get('/'.$route, $controller, 'index');
+        $this->post('/'.$route, $controller, 'store');
+        $this->get('/'.$route.'/create', $controller, 'create');
+        $this->get('/'.$route.'/{id}', $controller, 'show');
+        $this->post('/'.$route.'/{id}', $controller, 'update');
+        $this->get('/'.$route.'/{id}/edit', $controller, 'edit');
+        $this->post('/'.$route.'/{id}/delete', $controller, 'destroy');
+    }
     public function get($route, $controller, $action = '__invoke')
     {
         $this->addRoute($route, $controller, $action, "GET");
@@ -19,6 +28,15 @@ class Router
     public function post($route, $controller, $action = '__invoke')
     {
         $this->addRoute($route, $controller, $action, "POST");
+    }
+    public function put($route, $controller, $action = '__invoke')
+    {
+        $this->addRoute($route, $controller, $action, 'POST');
+    }
+
+    public function delete($route, $controller, $action = '__invoke')
+    {
+        $this->addRoute($route, $controller, $action, 'POST');
     }
     public function dispatch()
     {
