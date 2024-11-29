@@ -4,7 +4,14 @@
 namespace App\Database\Migrations;
 
 use Config\Migration;
-
+/*
+|---------------------------------------------
+| Sample User Migration
+|---------------------------------------------
+|
+| Here is where you can define your migrations
+|
+*/
 class CreateUser extends Migration {
     public function up() {
         $this->__invoke([

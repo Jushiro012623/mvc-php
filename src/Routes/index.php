@@ -5,7 +5,14 @@ use App\Controllers\Welcome;
 use Config\Router;
 $router = new Router();
 
-
+/*
+|----------------------------------------------------------------
+| Web Routes
+|----------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. 
+|
+*/
 $router->get('/', Welcome::class);
 $router->resource('users', UserController::class);
 $router->dispatch();

@@ -5,7 +5,14 @@ namespace App\Controllers;
 use App\Models\User;
 use Config\Controller;
 use App\Requests\UserRequests;
-
+/*
+|-----------------------------------------------------
+| Sample Controller Resource
+|-----------------------------------------------------
+|
+| Here is where you can controll the routes for /users 
+|
+*/
 class UserController extends Controller{
     public function index(){
         $users = User::findAll();

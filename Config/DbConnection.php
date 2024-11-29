@@ -1,7 +1,14 @@
 <?php
 
 namespace Config;
-
+/*
+|------------------------------------------------
+| Database Connection
+|------------------------------------------------
+|
+| Here is where this app connects to the database 
+|
+*/
 class DbConnection {
     public function __invoke(){
         $conn = mysqli_connect(

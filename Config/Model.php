@@ -1,6 +1,14 @@
 <?php
 namespace Config;
 
+/*
+|------------------------------------------------------
+| Models
+|------------------------------------------------------
+|
+| Here is where all the simple queries will be executed
+|
+*/
 class Model {
     private static $conn;
     protected $table;

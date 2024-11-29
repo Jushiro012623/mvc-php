@@ -3,10 +3,16 @@
 namespace App\Controllers;
 
 use Config\Controller;
+
+/*
+ * 
+ * Starter controller
+ * @return view 
+ */
 class Welcome extends Controller
 {
     public function __invoke()
     {
-        $this->render('welcome');
+        return $this->render('welcome');
     }
 }
