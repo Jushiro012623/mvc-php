@@ -2,6 +2,19 @@
 /**
  * @author Ivan Allen Macabontoc
  **/
+
+/*
+|-----------------------------------------------
+| Register The Auto Loader
+|-----------------------------------------------
+*/
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '../../Config/DbConnection.php';
-$router = require '../src/Routes/index.php';
+
+/*
+|---------------------------------------
+| Run The Application
+|---------------------------------------
+*/
+require '../src/Bootstrap/bootstrap.php';
+
+
